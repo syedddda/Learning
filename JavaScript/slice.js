@@ -37,3 +37,19 @@ console.log( '4 : ', newNames.slice( 2 ) );
 
 
 
+// Things to Remember
+
+const newNumbers = [1,2,3,4,5,6];
+
+// 1. Passing two index
+
+newNumbers.slice(2,3) // returns [2,3]
+
+// 2. Passing only one positive index
+
+newNumbers.slice(2) // returns [3,4,5,6]
+
+// 3. Passing only one negative index
+
+newNumbers.slice(-1) // returns [6]
+newNumbers.slice(-2) // returns [5,6]

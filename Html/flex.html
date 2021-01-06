@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Order</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="row">
+
+            <div class="col-lg-12">
+                
+                <h1>Flex Direction</h1>
+
+                <p>Flex directions of row-reverse and column-reverse will actually reverse the items only visually and the position of them in the DOM tree is never changed. They will also appear in the DOM order for any screen reading and keyboard tabbed navigation</p>
+
+                <div class="paddedContent">
+
+                    <h4>flex-direction: row</h4>
+    
+                    <div class="flexParent fdr">
+                        <div class="flexChild">
+                            1
+                        </div>
+                        <div class="flexChild">
+                            2
+                        </div>
+                        <div class="flexChild">
+                            3
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="paddedContent">
+
+                    <h4>flex-direction: column</h4>
+    
+                    <div class="flexParent fdc">
+                        <div class="flexChild">
+                            1
+                        </div>
+                        <div class="flexChild">
+                            2
+                        </div>
+                        <div class="flexChild">
+                            3
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="paddedContent">
+
+                    <h4>flex-direction: row-reverse</h4>
+
+                    <p>Row reverse actually reverses the items but also reverses the start and end. Below you can see that the order of 1,2,3 is reversed but they don't start from the left. Instead, they start from the right. This is the same for column reverse too!</p>
+    
+                    <div class="flexParent fdrr">
+                        <div class="flexChild">
+                            1
+                        </div>
+                        <div class="flexChild">
+                            2
+                        </div>
+                        <div class="flexChild">
+                            3
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="paddedContent">
+
+                    <h4>flex-direction: column-reverse</h4>
+    
+                    <div class="flexParent fdcr">
+                        <div class="flexChild">
+                            1
+                        </div>
+                        <div class="flexChild">
+                            2
+                        </div>
+                        <div class="flexChild">
+                            3
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <h1>Flex Order</h1>
+        
+                <p>Flex order is used to position the flex children inside a flex parent. Atleast two flex children should have an order specified for the order to take effect. When the order is specified for two children, those children that were not given an order will be displayed first in the semantic order and then those with the order specified will be displayed in the specified order(Lowest to highest)</p>
+        
+                <P>If the same order number is given for two children, then the one that is semantically appearing first in the Html will be shown first</P>
+
+                <div class="out">
+                    <div class="one">1</div>
+                    <div class="two">2</div>
+                    <div class="three">3</div>
+                    <div class="four">4</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

@@ -2,18 +2,18 @@ const searchInput = document.getElementById( 'searchInput' );
 
 let count = 0;
 
-const theSearchFunction = function() {
+let theSearchFunction = function( event ) {
     
-    const theLetter = this.value;
+    const theLetter = arguments[0].target.value;
 
-    console.log( 'Searching for ', theLetter );
+    console.log( `${theLetter} is ${arguments[1]}` );
 }
 
 const theDebounceFunction = ( theFunction, debounce ) => {
 
     let timedFunction;
 
-    return function() {
+    return function( event ) {
         const self = this;
         const args = arguments;
 
@@ -26,4 +26,6 @@ const theDebounceFunction = ( theFunction, debounce ) => {
 
 }
 
-searchInput.addEventListener( 'keyup', theDebounceFunction( theSearchFunction, 300 ) );
+const debouncedFunction = theDebounceFunction( theSearchFunction, 300 );
+
+searchInput.addEventListener( 'keyup', ( event ) => debouncedFunction( event, 'searched' ) );

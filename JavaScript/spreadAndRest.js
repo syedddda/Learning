@@ -11,7 +11,7 @@ function print( ...args ) {
 
 print(1,2,3,4,5);
 
-// In above log, even thought he values are sent individually comma separated, they are taken as an array because of the rest operator
+// In above log, even though the values are sent individually comma separated, they are taken as an array because of the rest operator
 
 function print1( first, second, ...rest ) {
     console.log( 'First : ', first );

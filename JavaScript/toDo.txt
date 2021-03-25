@@ -4,3 +4,8 @@ Prototype Pollution
 Map
 Generators
 Function Currying
+
+Imperative vs Declarative programming
+Linked list
+Binary search tree
+Sorting ( Bubble sort, Merge sort etc., )
